@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-700 rounded-lg hover:bg-dark-600;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-accent-cyan/30 text-white;
+}
+
+/* Smooth page transitions */
+@supports (animation-timeline: view()) {
+  .animate-in-view {
+    animation-timeline: view();
+  }
+}
