@@ -29,28 +29,28 @@ const FEATURED_PRODUCTS = [
     name: 'BAC Water',
     price: '$20.00',
     description: 'Bacteriostatic water for peptide reconstitution',
-    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/pomelli_photoshoot_image_9_16_0428-2-300x300.png',
+    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/bac-water.jpg',
   },
   {
     id: 8411,
     name: 'BPC-157',
     price: '$90.00',
     description: 'Bodyprotective compound for tissue research',
-    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/pomelli_photoshoot_image_9_16_0428-2-300x300.png',
+    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/bpc-157.jpg',
   },
   {
     id: 8413,
     name: 'GHK-Cu',
     price: '$110.00',
     description: 'Copper tripeptide for aging research',
-    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/pomelli_photoshoot_image_9_16_0428-2-300x300.png',
+    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/ghk-cu.jpg',
   },
   {
     id: 8374,
     name: 'Ipamorelin / CJC',
     price: '$160.00',
     description: 'Growth hormone secretagogue combination',
-    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/pomelli_photoshoot_image_9_16_0428-2-300x300.png',
+    image: 'https://telos-peptides.com/wp-content/uploads/2026/05/ipamorelin-cjc.jpg',
   },
 ]
 
@@ -108,7 +108,7 @@ export default function Home() {
             </motion.div>
 
             {/* Trust Line */}
-            <p className="text-sm text-dark-400">
+            <p className="text-sm text-white/60">
               No minimum order • 21+ only • Research use only
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
               Shop Popular Products
             </h2>
-            <p className="text-dark-300 max-w-2xl mx-auto">
+            <p className="text-white/70 max-w-2xl mx-auto">
               Every product includes COA & SDS via QR code. Eligible for Buy 9 Get 1 FREE promotion.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export default function Home() {
                   {/* Product Info */}
                   <div className="flex-1 p-4 sm:p-6 flex flex-col">
                     <h3 className="font-serif font-bold text-white mb-2 text-lg">{product.name}</h3>
-                    <p className="text-dark-300 text-sm mb-4 flex-1">{product.description}</p>
+                    <p className="text-white/70 text-sm mb-4 flex-1">{product.description}</p>
 
                     {/* Price */}
                     <div className="mb-4">
@@ -236,7 +236,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
               Why Choose Telos
             </h2>
-            <p className="text-dark-300">
+            <p className="text-white/70">
               Every product engineered to remove variables and let your data speak for itself.
             </p>
           </motion.div>
@@ -258,7 +258,7 @@ export default function Home() {
                 <Card hover className="p-6">
                   <div className="text-2xl mb-3">{item.icon}</div>
                   <h4 className="font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-dark-300 text-sm">{item.desc}</p>
+                  <p className="text-white/70 text-sm">{item.desc}</p>
                 </Card>
               </motion.div>
             ))}
@@ -309,7 +309,7 @@ export default function Home() {
               >
                 <Card hover className="p-4 sm:p-6">
                   <h4 className="font-semibold text-white mb-2">{faq.q}</h4>
-                  <p className="text-dark-300 text-sm">{faq.a}</p>
+                  <p className="text-white/70 text-sm">{faq.a}</p>
                 </Card>
               </motion.div>
             ))}
