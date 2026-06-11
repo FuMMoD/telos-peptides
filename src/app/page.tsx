@@ -1,6 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ShoppingCart, Shield, Zap, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/Button'
