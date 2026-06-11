@@ -28,6 +28,7 @@ const config: Config = {
         accent: {
           cyan: '#00d9ff',
           gold: '#d4af37',
+          lime: '#C0FF00',
           rose: '#ff1a75',
           purple: '#9d4edd',
         },

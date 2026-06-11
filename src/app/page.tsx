@@ -1,25 +1,30 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ShoppingCart, Shield, Zap, CheckCircle } from 'lucide-react'
+import { ShoppingCart, Shield, Lock, Globe, Truck, Zap, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 
 const TRUST_SIGNALS = [
   {
-    icon: Shield,
-    label: 'cGMP Origin',
-    description: 'ISO-9001 certified facilities following cGMP principles',
-  },
-  {
-    icon: Zap,
-    label: 'Triple-Filtered',
-    description: '0.22 µm filtration & gamma irradiation for sterility',
-  },
-  {
     icon: CheckCircle,
-    label: '3rd-Party Tested',
-    description: 'Every lot validated for purity, identity, and endotoxin',
+    label: '99%+ Purity',
+    description: 'Third-party HPLC tested. Certificates of analysis on every batch.',
+  },
+  {
+    icon: Lock,
+    label: 'Discreet & Secure',
+    description: 'Cold-chain shipping in tamper-evident packaging.',
+  },
+  {
+    icon: Globe,
+    label: 'US Manufactured',
+    description: 'Synthesized and packaged in audited US laboratories.',
+  },
+  {
+    icon: Truck,
+    label: 'Free Express Shipping',
+    description: 'Complimentary overnight delivery on orders over $200.',
   },
 ]
 
@@ -57,68 +62,98 @@ const FEATURED_PRODUCTS = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-dark-950">
-      {/* HERO SECTION - High Converting */}
-      <section className="relative pt-20 pb-16 sm:pt-32 sm:pb-24 bg-gradient-to-b from-dark-900 to-dark-950 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            {/* Urgency Badge */}
+      {/* HERO SECTION - Split Layout */}
+      <section className="relative pt-16 pb-20 sm:pt-24 sm:pb-32 bg-dark-950 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left: Text Content */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-              className="inline-block mb-6"
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-600/20 border border-yellow-600 text-yellow-300 text-sm font-semibold">
-                ✦ Limited Time Offer ✦
-              </span>
+              {/* Label */}
+              <p className="text-accent-lime text-sm font-semibold tracking-wider mb-6 uppercase">
+                Pharmaceutical-Grade Peptides
+              </p>
+
+              {/* Headline with Accent */}
+              <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                Engineered for
+                <span className="block text-accent-lime italic">
+                  peak biology.
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-white/70 text-lg mb-8 max-w-lg leading-relaxed">
+                Precision-formulated research peptides. Tested, traceable, and trusted by clinics and researchers across the country.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="inline-flex items-center justify-center gap-2 bg-accent-lime text-dark-950 hover:bg-accent-lime/90"
+                >
+                  Shop the Catalogue
+                  <span>→</span>
+                </Button>
+                <button className="px-8 py-3 border border-white/30 text-white hover:border-white hover:bg-white/5 transition-all duration-300 font-semibold">
+                  Our Science
+                </button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 sm:gap-6">
+                {[
+                  { value: '99%', label: 'AVG. PURITY' },
+                  { value: '12,000+', label: 'RESEARCHERS' },
+                  { value: '4.9', label: 'STAR RATED' },
+                ].map((stat, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + i * 0.1 }}
+                  >
+                    <p className="text-2xl sm:text-3xl font-bold text-accent-lime mb-1">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs sm:text-sm text-white/60 font-semibold">
+                      {stat.label}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-              Buy 9, Get 1
-              <span className="block text-yellow-300">
-                FREE
-              </span>
-            </h1>
-
-            {/* Sub Headline */}
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Research-grade peptides. Triple-tested. cGMP certified. Shipped cold-chain. Applied at checkout.
-            </p>
-
-            {/* CTA Button */}
+            {/* Right: Image Placeholder */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden lg:block"
             >
-              <Button
-                variant="primary"
-                size="lg"
-                className="inline-flex items-center gap-2 mb-8"
-              >
-                <ShoppingCart size={20} />
-                Shop Now & Save
-              </Button>
+              <div className="relative aspect-square rounded-lg border border-accent-lime/30 bg-dark-900/50 overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-lime/5 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <ShoppingCart className="w-16 h-16 text-accent-lime/30 mx-auto mb-4" />
+                    <p className="text-white/40 text-sm">Product Hero Image</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
-
-            {/* Trust Line */}
-            <p className="text-sm text-white/60">
-              No minimum order • 21+ only • Research use only
-            </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* TRUST SIGNALS - Early, Prominent */}
-      <section className="py-12 sm:py-16 bg-dark-900/50 border-y border-dark-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* TRUST SIGNALS - 4 Column Grid */}
+      <section className="py-16 sm:py-24 bg-dark-900/50 border-y border-dark-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {TRUST_SIGNALS.map((signal, i) => {
               const Icon = signal.icon
               return (
@@ -128,12 +163,11 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex gap-4"
                 >
-                  <Icon className="w-6 h-6 text-accent-gold flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">{signal.label}</h4>
-                    <p className="text-sm text-dark-300">{signal.description}</p>
+                  <div className="text-center">
+                    <Icon className="w-8 h-8 text-accent-lime mx-auto mb-4" />
+                    <h4 className="font-semibold text-white mb-2">{signal.label}</h4>
+                    <p className="text-sm text-white/60">{signal.description}</p>
                   </div>
                 </motion.div>
               )
@@ -142,9 +176,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED PRODUCTS - Conversion Optimized */}
+      {/* FEATURED PRODUCTS */}
       <section className="py-20 sm:py-28 bg-dark-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +194,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Product Grid - Mobile First */}
+          {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {FEATURED_PRODUCTS.map((product, i) => (
               <motion.div
@@ -170,7 +204,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card hover glowing className="flex flex-col h-full overflow-hidden group">
+                <Card hover glowing className="flex flex-col h-full overflow-hidden group border border-dark-800">
                   {/* Product Image */}
                   <div className="relative h-48 sm:h-56 overflow-hidden bg-dark-900">
                     <img
@@ -187,18 +221,13 @@ export default function Home() {
 
                     {/* Price */}
                     <div className="mb-4">
-                      <p className="text-2xl font-bold text-accent-gold">{product.price}</p>
+                      <p className="text-2xl font-bold text-accent-lime">{product.price}</p>
                     </div>
 
                     {/* CTA Button */}
-                    <Button
-                      variant="primary"
-                      size="md"
-                      fullWidth
-                      className="text-sm"
-                    >
+                    <button className="w-full px-4 py-3 bg-accent-lime text-dark-950 font-semibold hover:bg-accent-lime/90 transition-all duration-300 rounded text-sm">
                       Add to Cart
-                    </Button>
+                    </button>
                   </div>
                 </Card>
               </motion.div>
@@ -215,7 +244,7 @@ export default function Home() {
           >
             <a
               href="/shop"
-              className="inline-flex items-center gap-2 text-accent-gold hover:text-accent-gold/80 transition-colors font-semibold"
+              className="inline-flex items-center gap-2 text-accent-lime hover:text-accent-lime/80 transition-colors font-semibold"
             >
               View All {FEATURED_PRODUCTS.length}+ Products →
             </a>
@@ -223,7 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE TELOS - Social Proof */}
+      {/* WHY CHOOSE TELOS */}
       <section className="py-20 sm:py-28 bg-dark-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -255,8 +284,8 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card hover className="p-6">
-                  <div className="text-2xl mb-3">{item.icon}</div>
+                <Card hover className="p-6 border border-dark-800">
+                  <div className="text-2xl mb-3 text-accent-lime">{item.icon}</div>
                   <h4 className="font-semibold text-white mb-2">{item.title}</h4>
                   <p className="text-white/70 text-sm">{item.desc}</p>
                 </Card>
@@ -266,7 +295,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ - Conversion Focused */}
+      {/* FAQ */}
       <section className="py-20 sm:py-28 bg-dark-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -307,7 +336,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card hover className="p-4 sm:p-6">
+                <Card hover className="p-4 sm:p-6 border border-dark-800">
                   <h4 className="font-semibold text-white mb-2">{faq.q}</h4>
                   <p className="text-white/70 text-sm">{faq.a}</p>
                 </Card>
