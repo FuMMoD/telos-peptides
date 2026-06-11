@@ -93,14 +93,13 @@ export default function Home() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Button
-                  variant="primary"
+                  variant="lime"
                   size="lg"
-                  className="inline-flex items-center justify-center gap-2 bg-accent-lime text-dark-950 hover:bg-accent-lime/90"
                 >
                   Shop the Catalogue
-                  <span>→</span>
+                  <span className="ml-2">→</span>
                 </Button>
-                <button className="px-8 py-3 border border-white/30 text-white hover:border-white hover:bg-white/5 transition-all duration-300 font-semibold">
+                <button className="px-8 py-3 border border-white/30 text-white hover:border-white hover:bg-white/5 transition-all duration-300 font-semibold rounded-lg">
                   Our Science
                 </button>
               </div>
@@ -225,9 +224,14 @@ export default function Home() {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="w-full px-4 py-3 bg-accent-lime text-dark-950 font-semibold hover:bg-accent-lime/90 transition-all duration-300 rounded text-sm">
+                    <Button
+                      variant="lime"
+                      size="md"
+                      fullWidth
+                      className="text-sm"
+                    >
                       Add to Cart
-                    </button>
+                    </Button>
                   </div>
                 </Card>
               </motion.div>
