@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const footerLinks = {
   'Quick Links': [
-    { label: 'Products', href: '/shop' },
+    { label: 'Products', href: 'https://telos-peptides.com/store/' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
     { label: 'Affiliate Login', href: 'https://telos-peptides.com/my-account' },
@@ -15,10 +15,10 @@ const footerLinks = {
     { label: 'GLP-3, GLP-2 & BAC', href: '/learn-more/glp' },
   ],
   Legal: [
-    { label: 'Terms of Service', href: 'https://telos-peptides.com/terms-of-service/' },
-    { label: 'Privacy Policy', href: 'https://telos-peptides.com/privacy-policy/' },
-    { label: 'Shipping Policy', href: 'https://telos-peptides.com/shipping-policy/' },
-    { label: 'Refund Policy', href: 'https://telos-peptides.com/refund-policy/' },
+    { label: 'Terms of Service', href: '/terms-of-service' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Shipping Policy', href: '/shipping-policy' },
+    { label: 'Refund Policy', href: '/refund-policy' },
   ],
 }
 
