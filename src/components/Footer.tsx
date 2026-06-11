@@ -8,19 +8,17 @@ const footerLinks = {
     { label: 'Products', href: '/shop' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
-    { label: 'FAQ', href: '/faq' },
+    { label: 'Affiliate Login', href: 'https://telos-peptides.com/my-account' },
+  ],
+  'Learn More': [
+    { label: 'What Are Peptides', href: '/learn-more/what-are-peptides' },
+    { label: 'GLP-3, GLP-2 & BAC', href: '/learn-more/glp' },
   ],
   Legal: [
-    { label: 'Terms & Conditions', href: '/terms' },
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Shipping Policy', href: '/shipping' },
-    { label: 'Refund Policy', href: '/refunds' },
-  ],
-  Connect: [
-    { label: 'Affiliate Program', href: '/affiliate' },
-    { label: 'Newsletter', href: '#' },
-    { label: 'Twitter', href: '#' },
-    { label: 'Instagram', href: '#' },
+    { label: 'Terms of Service', href: 'https://telos-peptides.com/terms-of-service/' },
+    { label: 'Privacy Policy', href: 'https://telos-peptides.com/privacy-policy/' },
+    { label: 'Shipping Policy', href: 'https://telos-peptides.com/shipping-policy/' },
+    { label: 'Refund Policy', href: 'https://telos-peptides.com/refund-policy/' },
   ],
 }
 
@@ -31,10 +29,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-gold to-accent-cyan mb-4">
+            <h2 className="text-2xl font-serif font-bold text-white mb-4">
               TELOS
             </h2>
-            <p className="text-dark-300 text-sm">Research-grade peptides for scientific laboratories.</p>
+            <p className="text-white/60 text-sm">Research-grade peptides. Triple-tested. Trusted by scientists worldwide.</p>
           </div>
 
           {/* Links */}
@@ -46,7 +44,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-dark-300 hover:text-accent-cyan transition-colors duration-300 text-sm"
+                      className="text-white/70 hover:text-white transition-colors duration-300 text-sm"
                     >
                       {link.label}
                     </Link>
@@ -66,9 +64,9 @@ export function Footer() {
           className="border-t border-dark-800 pt-8"
         >
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-dark-400 text-sm">© 2026 Telos Peptides. All rights reserved.</p>
+            <p className="text-white/60 text-sm">© 2026 Telos Peptides. All rights reserved.</p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="#" className="text-dark-400 hover:text-accent-cyan transition-colors">
+              <Link href="#" className="text-white/60 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-7.007 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -78,8 +76,8 @@ export function Footer() {
           </div>
 
           {/* Disclaimer */}
-          <p className="text-dark-500 text-xs mt-6 pt-6 border-t border-dark-800">
-            ⚠️ Research Use Only – Products sold by Telos are intended exclusively for laboratory research. They are not medicines, supplements, or diagnostic tools and must never be consumed or injected.
+          <p className="text-white/50 text-xs mt-6 pt-6 border-t border-dark-800">
+            ⚠️ Research Use Only – Products sold by Telos are intended exclusively for laboratory research. They are not medicines, supplements, or diagnostic tools and must never be consumed or injected into humans or animals. By purchasing, you confirm that you are a qualified researcher.
           </p>
         </motion.div>
       </div>

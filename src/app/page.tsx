@@ -73,7 +73,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="inline-block mb-6"
             >
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-accent-gold/10 border border-accent-gold/30 text-accent-gold text-sm font-semibold">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-600/20 border border-yellow-600 text-yellow-300 text-sm font-semibold">
                 ✦ Limited Time Offer ✦
               </span>
             </motion.div>
@@ -81,13 +81,13 @@ export default function Home() {
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
               Buy 9, Get 1
-              <span className="block bg-gradient-to-r from-accent-gold via-white to-accent-gold bg-clip-text text-transparent">
+              <span className="block text-yellow-300">
                 FREE
               </span>
             </h1>
 
             {/* Sub Headline */}
-            <p className="text-lg sm:text-xl text-dark-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Research-grade peptides. Triple-tested. cGMP certified. Shipped cold-chain. Applied at checkout.
             </p>
 
